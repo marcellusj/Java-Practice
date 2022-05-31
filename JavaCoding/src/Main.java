@@ -1,12 +1,10 @@
+import java.text.NumberFormat;
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        // Implicit casting
-        // byte > short > int > long > float > double
-        String x = "1";
-        int y = Integer.parseInt(x) + 2;
-        System.out.println(y);
+        String result = NumberFormat.getPercentInstance().format(0.1);
+        System.out.println(result);
     }
 }

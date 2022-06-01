@@ -5,21 +5,21 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String role = "admin";
+        Scanner scanner = new Scanner(System.in);
 
-        switch (role) {
-            case "admin":
-                System.out.println("You're an admin");
-                break;
+        // Get the Input from console
+        System.out.print("Number: ");
+        int num = scanner.nextInt();
 
-            case "moderator":
-                System.out.println("You're a moderator");
-                break;
-
-            default:
-                System.out.println("You're a guest");
-        }
-
+        // Determine the output
+        if ((num % 5 == 0) && (num % 3 == 0))
+            System.out.println("FizzBuzz");
+        else if (num % 5 == 0)
+            System.out.print("Fizz");
+        else if (num % 3 == 0)
+            System.out.print("Buzz");
+        else
+            System.out.println(num);
 
     }
 }

@@ -5,9 +5,21 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int income = 120_000;
-        String className = income > 100_000 ? "First" : "Economy";
-        System.out.println(className);
+        String role = "admin";
+
+        switch (role) {
+            case "admin":
+                System.out.println("You're an admin");
+                break;
+
+            case "moderator":
+                System.out.println("You're a moderator");
+                break;
+
+            default:
+                System.out.println("You're a guest");
+        }
+
 
     }
 }

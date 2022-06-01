@@ -1,25 +1,24 @@
 import java.text.NumberFormat;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        String input = "";
 
-        // Get the Input from console
-        System.out.print("Number: ");
-        int num = scanner.nextInt();
+        while (!input.equals("quit")){
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        }
 
-        // Determine the output
-        if ((num % 5 == 0) && (num % 3 == 0))
-            System.out.println("FizzBuzz");
-        else if (num % 5 == 0)
-            System.out.print("Fizz");
-        else if (num % 3 == 0)
-            System.out.print("Buzz");
-        else
-            System.out.println(num);
-
+        do {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        } while (!input.equals("quit"));
     }
 }
